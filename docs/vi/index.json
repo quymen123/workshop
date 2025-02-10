@@ -1,0 +1,78 @@
+[
+{
+	"uri": "https://quymen123.github.io/workshop/vi/1-introduce/",
+	"title": "Giới thiệu",
+	"tags": [],
+	"description": "",
+	"content": "Trong ngành công nghiệp điện toán đám mây đang phát triển ngày nay, kiến trúc serverless đang thu hút sự chú ý đáng kể nhờ khả năng mở rộng, tiết kiệm chi phí và dễ dàng bảo trì. Dự án này của tôi sẽ trình bày cách xây dựng một chức năng đơn giản (đăng ký, đăng nhập) với Backend viết bằng Node.js, Frontend viết bằng Next.js, sử dụng cơ sở dữ liệu MongoDB và triển khai trên AWS bằng EC2. Công nghệ này cung cấp các công cụ mạnh mẽ để phát triển ứng dụng web có khả năng mở rộng và tiết kiệm chi phí với chi phí vận hành tối thiểu.\nTại sao sử dụng Node.js? Node.js là một nền tảng phát triển ứng dụng web hiệu suất cao, cho phép xử lý nhiều kết nối đồng thời nhờ mô hình bất đồng bộ. Việc sử dụng JavaScript cho cả client và server giúp Node.js có một hệ sinh thái thư viện phong phú thông qua npm, dễ dàng mở rộng cho kiến trúc microservices và phù hợp với các ứng dụng thời gian thực. Cộng đồng lớn và cú pháp dễ học cũng là những điểm nổi bật của Node.js.\nTại sao sử dụng Next.js? Next.js là một framework mạnh mẽ dành cho phát triển ứng dụng web, nổi bật với khả năng tối ưu hóa SEO nhờ Server-Side Rendering (SSR) và Static Site Generation (SSG). Nó cung cấp hiệu suất cao nhờ kỹ thuật chia nhỏ code và tải trang nhanh chóng. Next.js cũng dễ sử dụng với cấu trúc thư mục rõ ràng và hệ thống định tuyến tự động, giúp lập trình viên quản lý ứng dụng dễ dàng hơn.\nNgoài ra, framework này cho phép xây dựng API trong cùng một dự án, tạo sự liền mạch giữa frontend và backend. Với các tính năng phong phú như tối ưu hóa hình ảnh, CSS Modules và hỗ trợ TypeScript, Next.js rất phù hợp cho các dự án hiện đại. Cộng đồng phát triển lớn và tài liệu phong phú cũng là điểm cộng giúp người dùng dễ dàng tìm kiếm sự hỗ trợ và thông tin.\nTại sao sử dụng MongoDB? MongoDB là một cơ sở dữ liệu NoSQL linh hoạt, cho phép lưu trữ dữ liệu dưới dạng tài liệu, dễ dàng thay đổi cấu trúc mà không cần chỉnh sửa schema. Nó hỗ trợ phân tán dữ liệu và mở rộng theo chiều ngang, giúp xử lý lượng dữ liệu lớn với tốc độ truy vấn nhanh. MongoDB cũng dễ dàng tích hợp với nhiều ngôn ngữ lập trình, cung cấp khả năng truy vấn mạnh mẽ và có cộng đồng hỗ trợ lớn, trở thành một lựa chọn lý tưởng cho các ứng dụng hiện đại.\nTại sao sử dụng AWS EC2? AWS EC2 (Elastic Compute Cloud) là một dịch vụ điện toán đám mây cho phép mở rộng linh hoạt, triển khai và quản lý máy chủ ảo dễ dàng chỉ trong vài phút. Nó cung cấp độ sẵn sàng cao với nhiều vùng và khu vực khác nhau, bảo mật mạnh mẽ và tích hợp dễ dàng với các dịch vụ AWS khác. Mô hình thanh toán theo nhu cầu giúp tối ưu hóa chi phí, khiến EC2 trở thành lựa chọn lý tưởng để triển khai ứng dụng hiện đại.\nWorkshop bao gồm 6 phần chính: Giới thiệu Chuẩn bị Tải Visual Studio Code Tạo AWS EC2 và kết nối instance Triển khai Backend trên AWS EC2 Triển khai Frontend trên AWS EC2 Kiểm tra và đánh giá ứng dụng Dọn dẹp tài nguyên "
+},
+{
+	"uri": "https://quymen123.github.io/workshop/vi/2-preparation/2.1-vscode/",
+	"title": "Tải Visual Studio Code",
+	"tags": [],
+	"description": "",
+	"content": "1. Truy cập Visual Studio Code (Liên kết: https://code.visualstudio.com/download) để tải xuống IDE.\n2. Vui lòng truy cập trang tài liệu (Liên kết: https://code.visualstudio.com/docs) để xem thông tin chi tiết và sử dụng plugin.\n"
+},
+{
+	"uri": "https://quymen123.github.io/workshop/vi/",
+	"title": "Workshop",
+	"tags": [],
+	"description": "",
+	"content": "Xây dựng hệ thống đăng nhập xác thực trên ec2 aws với NodeJS và Nextjs Nội dung Giới thiệu Chuẩn bị Tải Visual Studio Code Tạo AWS EC2 và kết nối instance Triển khai Backend trên AWS EC2 Triển khai Frontend trên AWS EC2 Kiểm tra và đánh giá ứng dụng Dọn dẹp tài nguyên "
+},
+{
+	"uri": "https://quymen123.github.io/workshop/vi/2-preparation/",
+	"title": "Chuẩn bị",
+	"tags": [],
+	"description": "",
+	"content": "Content Tải Visual Studio Code Tạo AWS EC2 và kết nối instance "
+},
+{
+	"uri": "https://quymen123.github.io/workshop/vi/2-preparation/2.2-ec2/",
+	"title": "Tạo AWS EC2 và kết nối instance",
+	"tags": [],
+	"description": "",
+	"content": "1. Cài đặt EC2 instance\nChọn EC2 từ danh mục dịch vụ\nChọn \u0026ldquo;Launch an instance\u0026rdquo;\nThiết lập các tham số cho instance\nTạo một cặp khóa (Key Pair) mới\nChọn \u0026ldquo;Launch instance\u0026rdquo;\nHiển thị thông báo thành công\nHiển thị danh sách các instance vừa được tạo\n2. Kết nối đến instance vừa tạo thành công\nNhấp vào tên instance và chọn \u0026ldquo;Login\u0026rdquo;\nChọn các tham số, sau đó nhấp \u0026ldquo;Login\u0026rdquo; để kết nối instance\nĐăng nhập thành công\n"
+},
+{
+	"uri": "https://quymen123.github.io/workshop/vi/3-deploybackend/",
+	"title": "Triển khai Backend trên AWS EC2",
+	"tags": [],
+	"description": "",
+	"content": "1. Cài đặt Node.js và Git bằng nvm\nChuyển sang người dùng root: sudo su -w Cài đặt nvm: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash Nvm là trình quản lý phiên bản cho Node.js. Nó cho phép bạn cài đặt nhiều phiên bản Node.js và dễ dàng chuyển đổi giữa chúng. Kích hoạt nvm: . ~/.nvm/nvm.sh Chúng ta cần kích hoạt nvm để có thể sử dụng trong phiên làm việc hiện tại. Sử dụng nvm để cài đặt Node.js: nvm install node Cài đặt phiên bản mới nhất của Node.js bằng nvm. Cài đặt git: sudo apt-get update –y sudo apt-get install git –y Git cần thiết để clone kho lưu trữ mà chúng ta đã tạo trước đó. 2. Kết nối SSH key GitHub với EC2\nTạo SSH key: ssh-keygen -t ed25519 -C \u0026#34;your email\u0026#34; Tạo dấu vân tay cho SSH key. Khởi động SSH-Agent: eval \u0026#34;$(ssh-agent -s)\u0026#34; Lệnh eval được sử dụng để khởi động SSH-Agent trong phiên làm việc hiện tại. SSH-Agent là một chương trình chạy nền giúp lưu trữ SSH key của bạn. Nó giúp xác thực với máy chủ từ xa mà không cần nhập mật khẩu mỗi lần. Thêm SSH key vào SSH-Agent: ssh-add ~/.ssh/id_ed25519 Sao chép SSH key và dán vào GitHub: cat ~/.ssh/id_ed25519.pub 3. Triển khai Backend trên AWS EC2\nClone mã nguồn từ GitHub: ssh -T git@github.com git clone https://github.com/quymen123/ProjectAWS_BE.git Cài đặt thư viện bằng npm: cd ProjectAWS_BE/ npm i Cài đặt pm2 để ứng dụng vẫn chạy ngay cả khi thoát terminal: npm install pm2 -g Chạy ứng dụng bằng pm2: pm2 start src/index.js "
+},
+{
+	"uri": "https://quymen123.github.io/workshop/vi/4-deployfrontend/",
+	"title": "Triển khai Frontend trên AWS EC2",
+	"tags": [],
+	"description": "",
+	"content": "1. Triển khai Frontend trên AWS EC2\nClone mã nguồn từ GitHub: ssh -T git@github.com git clone https://github.com/quymen123/ProjectAWS_FE.git Cài đặt thư viện bằng npm: ls cd ProjectAWS_FE/ npm i Chạy lệnh build dự án: npm run build Cài đặt pm2 để ứng dụng vẫn chạy ngay cả khi thoát terminal: npm install pm2 -g Chạy ứng dụng bằng pm2: pm2 start npm --name nextjs-app -- run start -- -p 3333 Lưu tiến trình pm2 để tự động khởi động lại khi hệ thống khởi động lại: pm2 save "
+},
+{
+	"uri": "https://quymen123.github.io/workshop/vi/5-testing/",
+	"title": "Kiểm tra và đánh giá ứng dụng",
+	"tags": [],
+	"description": "",
+	"content": "1. Sao chép Địa chỉ IPv4 công khai và dán vào trình duyệt:\nhttp://54.89.223.174:8888/ Cổng (Port): 8888 là số cổng. Cổng được sử dụng để xác định một dịch vụ trên máy chủ. Trong trường hợp này, cổng 8888 thường được dùng cho các ứng dụng web, proxy hoặc các dịch vụ khác. 2. Giao diện trang đăng ký Trang đăng ký có kiểm tra định dạng email và không cho phép bỏ trống các trường. Sau khi đăng ký thành công, thông tin sẽ được gửi đến MongoDB và có thể tiến hành đăng nhập. 3. Giao diện trang đăng nhập Nhập email và mật khẩu đã đăng ký để đăng nhập. Đăng nhập thành công, nhấn thoát để đăng xuất. "
+},
+{
+	"uri": "https://quymen123.github.io/workshop/vi/6-cleanup/",
+	"title": "Dọn dẹp tài nguyên",
+	"tags": [],
+	"description": "",
+	"content": " Sau khi dự án đã được triển khai và hoạt động ổn định, việc dọn dẹp và quản lý các tài nguyên đã sử dụng trong quá trình phát triển là rất quan trọng. Điều này không chỉ giúp bạn tránh được các chi phí không cần thiết mà còn duy trì một môi trường làm việc hiệu quả. Dưới đây là các bước để tối ưu và dọn dẹp tài nguyên AWS đã tạo ra trong suốt dự án\n1. Xóa các Instances AWS EC2 Việc xóa các EC2 instances AWS là cần thiết để quản lý chi phí, vì nó giảm bớt các khoản phí không cần thiết cho các tài nguyên không sử dụng. Điều này cũng nâng cao bảo mật bằng cách giảm thiểu bề mặt tấn công, tối ưu hóa phân bổ tài nguyên, và cải thiện sự rõ ràng và tổ chức trong môi trường của bạn. Hơn nữa, việc xóa các instances lỗi thời định kỳ giúp đảm bảo tuân thủ các chính sách của tổ chức, làm cho đây trở thành một thực tiễn tốt nhất trong quản lý tài nguyên hiệu quả.\n2. Kiểm tra Dọn Dẹp Sau khi xóa tài nguyên, điều quan trọng là kiểm tra xem tất cả các chi phí liên quan đã được loại bỏ hay chưa như một thực tiễn tốt. Bạn có thể sử dụng AWS Cost Explorer để theo dõi và xác nhận rằng không có khoản phí nào được tính từ các tài nguyên còn lại.\nBằng cách làm theo các bước này, bạn sẽ đảm bảo rằng môi trường AWS của mình đã được dọn dẹp đúng cách, giúp ngăn ngừa chi phí không cần thiết và duy trì một cơ sở hạ tầng đám mây gọn gàng, hiệu quả.\n"
+},
+{
+	"uri": "https://quymen123.github.io/workshop/vi/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://quymen123.github.io/workshop/vi/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

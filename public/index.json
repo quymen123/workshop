@@ -1,0 +1,78 @@
+[
+{
+	"uri": "http://localhost:1313/workshop/2-preparation/2.1-vscode/",
+	"title": "Download Visual Studio Code",
+	"tags": [],
+	"description": "",
+	"content": "1. Visit Visual Studio Code to download the IDE. 2. Please visit the Document page to see detailed information and use plugins. "
+},
+{
+	"uri": "http://localhost:1313/workshop/1-introduce/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "In today\u0026rsquo;s evolving cloud computing industry, serverless architecture is attracting significant attention for its scalability, cost-effectiveness, and ease of maintenance. This project of mine will demonstrate how to build a simple single function (registration, login) with a Backend written in Nodejs, a Frontend written in Nextjs, using MongoDB database and deployed on AWS using EC2. This technology provides powerful tools to develop scalable and cost-effective web applications with minimal operating costs.\nWhy use Nodejs? Node.js is a web performance application development platform that allows handling multiple connections simultaneously thanks to an asynchronous model. Using JavaScript for both client and server, Node.js has a rich ecosystem of libraries via npm, is easily extensible for application microservices, and is suitable for real-time applications. A large community and easy-to-learn syntax are also outstanding features of Node.js.\nWhy use Nextjs? Next.js is a powerful framework for web application development, featuring SEO optimization capabilities through Server-Side Rendering (SSR) and Static Site Generation (SSG). It provides high performance thanks to code splitting and fast page loading. Next.js is also easy to use with a clear directory structure and automatic routing, helping programmers easily manage the application. Additionally, this framework allows building APIs within the same project, creating seamlessness between front-end and back-end. With rich features like optimized images, CSS Modules, and TypeScript support, Next.js is suitable for modern projects. The large development community and rich documentation are also plus points that help users easily find support and information.\nWhy use MongoDB MongoDB is a flexible NoSQL database that allows data to be stored in the form of documents, easily changing the structure without changing the schema. It supports data dispersion and horizontal scaling, helping to process large amounts of data with fast query speeds. MongoDB is also easy to integrate with many programming languages, offers powerful querying capabilities, and has a large support community, making it an ideal choice for modern applications.\nWhy use AWS EC2? AWS EC2 (Elastic Compute Cloud) is a cloud computing service that allows flexible expansion, easy deployment and management of virtual servers in minutes. It provides high availability with multiple zones and regions, strong security, and easy integration with other AWS services. The on-demand payment model helps optimize costs, making it the ideal choice for modern application deployment.\nThe workshop includes 6 main sections Introduction Preparation Download Visual Studio Code Create AWS EC2 and Connect instance Deploy Backend on AWS EC2 Deploy Frontend on AWS EC2 Test and review app Clean Resources "
+},
+{
+	"uri": "http://localhost:1313/workshop/",
+	"title": "Workshop",
+	"tags": [],
+	"description": "",
+	"content": "Build an authentication login system on ec2 aws with NodeJS and Nextjs Content Introduction Preparation Download Visual Studio Code Create AWS EC2 and Connect instance Deploy Backend on AWS EC2 Deploy Frontend on AWS EC2 Test and review app Clean Resources "
+},
+{
+	"uri": "http://localhost:1313/workshop/2-preparation/2.2-ec2/",
+	"title": "Create AWS EC2 and Connect instance",
+	"tags": [],
+	"description": "",
+	"content": "1. Install EC2 instance\nSelect EC2 from the services category Select Launch an instance Set instance parameters Create a new key pair Select Launch instance Display success message Displays newly created Instances 2. Connect instance has just been created successfully\nClick on the Instance name and click Login Select parameters, click login to connect instance Login successfully "
+},
+{
+	"uri": "http://localhost:1313/workshop/2-preparation/",
+	"title": "Preparation",
+	"tags": [],
+	"description": "",
+	"content": "Content Download Visual Studio Code Create AWS EC2 và kết nối instance "
+},
+{
+	"uri": "http://localhost:1313/workshop/3-deploybackend/",
+	"title": "Deploy Backend on AWS EC2",
+	"tags": [],
+	"description": "",
+	"content": "1. Install node and git using nvm\nChange to root user: sudo su -w Install nvm: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash Nvm is a version manager for nodejs. It allows you to install multiple versions of nodejs and switch between them easily. Active nvm: . ~/.nvm/nvm.sh We need to activate nvm so that we can use it in the current terminal session Use nvm to install node: nvm install node Install the latest version of node using nvm Install git: sudo apt-get update –y sudo apt-get install git –y Git is need to clone the repo we created earlier 2. Connect github ssh key to ec2 instance\nGenerate ssh key: ssh-keygen -t ed25519 -C \u0026#34;your email\u0026#34; Generate a fingerprint for the ssh key Eval the ssh-agent: eval \u0026#34;$(ssh-agent -s)\u0026#34; Eval is used to evaluate the ssh-agent in the current terminal session. The ssh-agent is a program that runs in the background and stores your ssh keys. The ssh-agent is used to authenticate you to the remote server without having to type your password every time. Add the ssh key to the ssh-agent: ssh-add ~/.ssh/id_ed25519 Copy ssh key and Paste into github: cat ~/.ssh/id_ed25519.pub 3. Deploy Backend on AWS EC2\nClone code from github: ssh -T git@github.com git clone https://github.com/quymen123/ProjectAWS_BE.git Install library npm i: cd ProjectAWS_BE/ npm i Install pm2 so that when you exit the terminal, the app is still running: npm install pm2 -g Run the app using pm2: pm2 start src/index.js "
+},
+{
+	"uri": "http://localhost:1313/workshop/4-deployfrontend/",
+	"title": "Deploy Frontend on AWS EC2",
+	"tags": [],
+	"description": "",
+	"content": "1. Deploy Frontend on AWS EC2\nClone code from github: ssh -T git@github.com git clone https://github.com/quymen123/ProjectAWS_FE.git Install library npm i: ls cd ProjectAWS_FE/ npm i Run build project: npm run build Install pm2 so that when you exit the terminal, the app is still running: npm install pm2 -g Run the app using pm2: pm2 start npm --name nextjs-app -- run start -- -p 3333 Run pm2 save to save the process: pm2 save "
+},
+{
+	"uri": "http://localhost:1313/workshop/5-testing/",
+	"title": "Test and Review app",
+	"tags": [],
+	"description": "",
+	"content": "1. Select copy Adresse IPv4 publique and paste it into the browser:\nhttp://54.89.223.174:8888/ Port (Port): 8888 is the port number. The port is used to identify a service engine on the server. In this case, port 8888 is typically used for web applications, proxies, or other services. 2. Registration page interface The registration page has the email format checked and fields cannot be left blank. After successful registration, information will be sent to Mongo DB and login can be performed. 3. Login page interface Enter your registered email and password to log in Log in successfully, press exit to log out. "
+},
+{
+	"uri": "http://localhost:1313/workshop/6-cleanup/",
+	"title": "Clean Resources",
+	"tags": [],
+	"description": "",
+	"content": " After the project has been deployed and is running smoothly, it is crucial to clean up and manage the resources used during the development process. This not only helps you avoid unnecessary costs but also maintains an efficient working environment. Below are the steps to optimize and clean up the AWS resources created during the project\n1. Delete AWS EC2 Instances Deleting AWS EC2 instances is essential for cost management, as it reduces unnecessary charges for unused resources. It also enhances security by minimizing the attack surface, optimizes resource allocation, and improves clarity and organization within your environment. Additionally, regularly removing outdated instances helps ensure compliance with organizational policies, making it a best practice for effective resource management.\n2. Verify Cleanup After deleting resources, it\u0026rsquo;s important to check that all associated costs have been eliminated as a best practice. You can use AWS Cost Explorer to monitor and confirm that no charges are being incurred from any remaining resources.\nBy following these steps, you will ensure that your AWS environment is properly cleaned up, helping to prevent unnecessary costs and maintain a neat, efficient cloud infrastructure.\n"
+},
+{
+	"uri": "http://localhost:1313/workshop/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://localhost:1313/workshop/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
